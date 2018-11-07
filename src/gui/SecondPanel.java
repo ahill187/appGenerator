@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SecondPanel extends CardPanel {
-    
+
     private List<String> initialTextBoxes = Arrays.asList("Tab", "Number of Tabs", "Tab Titles");
     PanelCards cards;
     ButtonAction buttonAction;

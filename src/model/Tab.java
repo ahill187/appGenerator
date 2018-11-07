@@ -32,7 +32,9 @@ public class Tab {
     }
 
     public void addToAppBrickHash(String key, AppBrick brick){
-
+        if(!appBrickHash.containsKey(key)){
+            appBrickHash.put(key, brick);
+        }
     }
 
     public Map<String, TabBox> getTabBoxHash() {
