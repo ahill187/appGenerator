@@ -7,7 +7,6 @@ import java.util.List;
 
 public class FirstPanel extends CardPanel {
 
-    private List<TextBox> textBoxes = new ArrayList<>();
     private List<String> initialTextBoxes = Arrays.asList("App Title", "Number of Tabs", "Tab Titles");
     PanelCards cards;
     ButtonAction buttonAction;
@@ -31,18 +30,7 @@ public class FirstPanel extends CardPanel {
     }
 
     public void makePanel(){
-        int i = 0;
-        for(String boxes : initialTextBoxes){
-            TextBox textBox = new TextBox();
-            textBoxes.add(textBox);
-            textBox.makeTextBox(boxes,"", 50, 100+i*(textBox.height+50));
-            textBox.getLabel().setLabelFor(textBox.getTextBox());
-            this.add(textBox.getLabel());
-            this.add(textBox.getTextBox());
-            System.out.println(boxes);
-            System.out.println(textBoxes.get(i));
-            i += 1;
-        }
+        this.addInputBoxes(initialTextBoxes);
         this.addPreviousButton();
         this.addNextButton();
 
